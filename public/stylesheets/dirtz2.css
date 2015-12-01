@@ -1,0 +1,128 @@
+body {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #333333;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/*CHESS BOARD*/
+/* white square */
+/*.white-1e1d7 {
+  background-color: #F2F4F1;
+  color: #5a3336;
+}*/
+/* black square */
+/*.black-3c85d {
+  background-color: rgb(192,216,144);
+  color: #f2f4f1;
+}*/
+/*END CHESS BOARD*/
+
+/*MAIN ROW*/
+.main-row {
+  /*overflow: hidden; */
+  height: 556px;
+}
+/*END MAIN ROW*/
+
+/*MAIN COL = GAME*/
+.main-col {
+  /*margin-bottom: -99999px;
+  padding-bottom: 99999px;*/
+  background-color: #2f2f2f;
+}
+/*END MAIN COL*/
+
+
+/*RIGHTBOX*/
+.right-box {
+  background-color: #7e7e7e;
+  height: 100%;
+  overflow: scroll;
+  padding: 0px;
+  padding-bottom: 0;
+  /*  box-shadow: 8px 8px black;
+    box-shadow: 10px 10px 0px black;
+*/
+}
+
+.right-box > table {
+  background-color: white;
+}
+/*END RIGHTBOX*/
+
+/*LEFTBOX*/
+.left-box {
+  background-color: #3f3f3f;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  /*box-shadow: 0 4px 2px -2px black;*/
+}
+.left-box-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  height: 536px;
+}
+.x {
+  order: 1;
+  flex-grow: 1;
+  background-color: #e5e5e5;
+  padding-top: 50px;
+}
+.y {
+  order: 2;
+  flex-grow: 3;
+/*  background-color: red;
+*/  padding-top: 50px;
+}
+.z {
+  order: 3;
+  flex-grow: 1;
+  background-color: #e5e5e5;
+  padding-top: 50px;
+}
+/*END LEFTBOX*/
+
+/*CHATBOX*/ 
+.chat-display {
+  background-color: #3f3f3f;
+  height: 100%;
+  padding: 10px;
+  padding-bottom: 0px;
+  /*-moz-box-shadow:    3px 3px 5px 10px black;
+  -webkit-box-shadow: 3px 3px 5px 10px black;
+  box-shadow:         3px 3px 5px 5px black;*/
+}
+.chatroom {
+  height: 170px;
+  margin-top: 25px;
+}
+.chatroom-display {
+  border: 1px solid black;
+  height: 160px;
+}
+/*lower*/
+#msg {
+  width: 50%;
+}
+.submit-btn {
+  border-radius: 0;
+  height: 30px;
+  padding: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.chatbox {
+  height: 50px;
+}
+.chat-display-bottom {
+  /*-moz-box-shadow:    3px 3px 5px 10px black;
+  -webkit-box-shadow: 3px 3px 5px 10px black;
+  box-shadow:         3px 3px 5px 5px black;*/
+}

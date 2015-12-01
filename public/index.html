@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <title>Express Chess</title>
+  <link rel="stylesheet" href="/stylesheets/chessboard-0.3.0.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.10.1/bootstrap-social.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+  <base href="/">
+</head>
+<body ng-controller="GlobalController">
+
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+        <a class="navbar-brand" href="/">Express Chess</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="/lobby">Lobby</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Training
+            <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Tactics</a></li>
+              <li><a href="#">Library</a></li>
+              <li><a href="#">Resources</a></li> 
+            </ul>
+          </li>
+          <li><a href="/history">History</a></li> 
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+          <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div ng-view>
+  </div>
+
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="/javascripts/chessboard-0.3.0.min.js"></script>
+  <script src="/javascripts/chessboard-0.3.0.js"></script>
+  <script src="/javascripts/jQueryJankidy.js"></script>
+  <script src="/javascripts/chess.js"></script>
+  <script src="/javascripts/ng-app.js"></script>
+  <script src="/javascripts/ng-factories.js"></script>
+  <script src="/javascripts/ng-controllers.js"></script>
+  <script src="/javascripts/ng-filters.js"></script>
+  <script src="/ng-app.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- <script src="/javascripts/chess-client.js"></script> -->
+</body>
+</html>

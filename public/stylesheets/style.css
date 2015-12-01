@@ -1,0 +1,136 @@
+body {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #333333;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.board-wrapper {
+  position: relative;
+}
+
+#board {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+}
+
+.x {
+  color: white;
+  margin-top: 150px;
+}
+
+
+
+/*START REGISTER */
+#register label {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+#register form{
+  color: #000;
+  padding: 30px 30px;
+}
+
+#register .btn {
+  margin-top: 30px;
+  background-color: #f05f40;
+  margin-bottom: 10px;
+}
+
+#register .btn:hover {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  background-color: #eb3812;
+}
+
+.margin-left {
+  margin-left: 5px;
+}
+
+.form-container {
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 40px;
+/*  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);*/
+}
+
+.register-heading {
+  margin-top:20px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 60px;
+  text-shadow: 3px 3px 6px #222;
+}
+
+.register-button-div {
+  text-align: center;
+}
+
+.register-button-div a {
+  color:#f05f40;
+}
+
+.register-button-div a:hover {
+  text-decoration: none;
+  color:#333;
+}
+/*END REGISTER*/
+/*START LOGIN */
+#login {
+  padding: 0px 0px 30px 0px;
+}
+
+#login label {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+#login form{
+  color: #000;
+  padding: 30px 30px;
+}
+
+#login .btn {
+  margin-top: 30px;
+  background-color: #f05f40;
+  margin-bottom: 10px;
+}
+
+#login .btn:hover {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  background-color: #eb3812;
+}
+
+.login-heading {
+  margin-top:20px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 60px;
+  text-shadow: 3px 3px 6px #222;
+}
+
+.login-button-div {
+  text-align: center;
+}
+
+.login-button-div a {
+  color:#f05f40;
+}
+
+.login-button-div a:hover {
+  text-decoration: none;
+  color:#333;
+}
+/*END LOGIN */
