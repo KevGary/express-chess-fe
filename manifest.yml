@@ -1,5 +1,5 @@
 ---
 applications:
-- name: chess-fe
+- name: express-chess-fe
   memory: 64M
   buildpack: https://github.com/cloudfoundry/nodejs-buildpack
