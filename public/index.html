@@ -10,6 +10,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular-animate.js"></script>
   <base href="/">
 </head>
 <body ng-controller="GlobalController">
@@ -39,15 +40,46 @@
           <li><a href="/history">History</a></li> 
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
-          <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li ng-show="!loginBoolean" ng-cloak><a href="/register"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+          <li ng-show="!loginBoolean" ng-cloak><a href="/login"><span class="glyphicon glyphicon-log-in"></span> {{loginStatus}}</a></li>
+          <li ng-show="loginBoolean" ng-click="logout()" ng-cloak><a href="/">{{loginStatus}} <span class="glyphicon glyphicon-log-out"></span></a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <div ng-view>
+  <div class="ng-view">
   </div>
+
+  <!-- Footer starts -->  
+  <footer class="text-center footer-custom">
+    <div class="footer-btns">
+      <button class="footer-btn btn btn-lg btn-primary">Contact
+      </button> |
+      <button class="footer-btn btn btn-lg btn-primary">FAQs
+      </button> |
+      <button class="footer-btn btn btn-lg btn-primary">Terms of Use
+      </button> |
+      <button class="footer-btn btn btn-lg btn-primary">Privacy Policy
+      </button>
+    </div>
+    <button class="btn btn-lg btn-social-icon btn-twitter">
+      <span class="fa fa-twitter"></span>
+    </button>
+    <button class="btn btn-lg btn-social-icon btn-facebook">
+      <span class="fa fa-facebook"></span>
+    </button>
+    <button class="btn btn-lg btn-social-icon btn-github">
+      <span class="fa fa-github"></span>
+    </button>
+    <div class="footer-description">
+      Open-source multiplayer chess.
+    </div>
+    <div class="footer-credits">
+      Enjoy.
+    </div>
+  </footer>
+  <!-- Footer ends -->
 
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="/javascripts/chessboard-0.3.0.min.js"></script>
@@ -55,10 +87,9 @@
   <script src="/javascripts/jQueryJankidy.js"></script>
   <script src="/javascripts/chess.js"></script>
   <script src="/javascripts/ng-app.js"></script>
-  <script src="/javascripts/ng-factories.js"></script>
   <script src="/javascripts/ng-controllers.js"></script>
   <script src="/javascripts/ng-filters.js"></script>
-  <script src="/ng-app.js"></script>
+  <script src="/javascripts/ng-app.js"></script>
   <script src="/socket.io/socket.io.js"></script>
   <!-- <script src="/javascripts/chess-client.js"></script> -->
 </body>

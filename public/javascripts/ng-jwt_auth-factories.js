@@ -11,10 +11,22 @@
 // app.factory('UserFactory', function UserFactory($http, $q, API_URL, AuthTokenFactory) {
 //   'use strict';
 //   return {
+//     register: register,
 //     login: login,
 //     logout: logout,
 //     getUser: getUser
 //   };
+
+//   function register(user){
+//     return $http.post(API_URL + '/register',
+//     {
+//       "user": user
+//     })
+//     .then(function success(response) {
+//       AuthTokenFactory.setToken(response.data.token);
+//       return response;
+//     });
+//   }
 
 //   function login(user){
 //     return $http.post(API_URL + '/login',
@@ -26,6 +38,7 @@
 //       return response;
 //     });
 //   }
+  
 
 //   function logout() {
 //     AuthTokenFactory.setToken();
