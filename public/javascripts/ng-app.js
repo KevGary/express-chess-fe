@@ -54,8 +54,11 @@ app.controller('RegisterController', function ($scope, $q, UserFactory, RandomUs
   }
 })
 
-app.controller('LobbyController', function ($scope) {
-  $scope.msg = 'thug'
+app.controller('LobbyController', function ($scope, Games) {
+  $scope.allGames = Games.getAllGames();
+  $scope.createGame = function() {
+    Games.createGame();
+  }
 })
 
 app.controller('GameController', function ($scope) {
@@ -136,7 +139,7 @@ app.factory('UserFactory', function UserFactory($http, $q, API_URL, AuthTokenFac
 
   function getUser() {
     if(AuthTokenFactory.getToken()) {
-      return $http.get('API_URL' + '/me')
+      return $http.get(API_URL + '/me')
     } else {
       return $q.reject({ data: 'client has no authorization '})
     }
@@ -189,7 +192,8 @@ app.factory('LoginStatus', function LoginStatus($rootScope, $window) {
   return {
     getLoginStatusBoolean: getLoginStatusBoolean,
     getLoginStatusString: getLoginStatusString,
-    setLoginStatus: setLoginStatus
+    setLoginStatus: setLoginStatus,
+    setRootScope: setRootScope
   };
 
   function setRootScope() {
@@ -215,6 +219,25 @@ app.factory('LoginStatus', function LoginStatus($rootScope, $window) {
   }
 })
 //END LOGINSTATUS FACTORIES
+
+//GAME FACTORIES
+app.factory('Games', function CreateGame($q, $http, API_URL) {
+  return {
+    createGame: createGame,
+    getAllGames: getAllGames
+  }
+
+  function createGame() {
+    return $http.post(API_URL + '/games');
+  }
+  function getAllGames() {
+    return $http.get(API_URL + '/games')
+      .then(function success(response){
+        return response;
+      })
+  }
+});
+//END GAME FACTORIES
 
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider){
   $routeProvider
